@@ -1,0 +1,4 @@
+Flask==0.10.1
+Flask-RESTful==0.3.2
+-e git+https://github.com/caerusassociates/mitie-py#egg=mitie
+tornado==4.1
