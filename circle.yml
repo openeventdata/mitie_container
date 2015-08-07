@@ -4,7 +4,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t caerusassociates/topics .
+    - docker build -t caerusassociates/mitie .
 test:
   post:
     - docker run -d -p 5001:5001 caerusassociates/mitie; sleep 10
