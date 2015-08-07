@@ -10,7 +10,10 @@ RUN easy_install pip
 ADD . /src
 
 RUN cd src; git clone https://github.com/mit-nlp/MITIE.git
-RUN cd src/MITIE; make MITIE-models
+
+RUN cd src/MITIE, wget http://sourceforge.net/projects/mitie/files/binaries/MITIE-models-v0.2.tar.bz2
+RUN cd src/MITIE, tar --no-same-owner -xjf MITIE-models-v0.2.tar.bz2
+
 RUN cd src/MITIE/mitielib; mkdir build
 RUN cd src/MITIE/mitielib/build; cmake ..
 RUN cd src/MITIE/mitielib/build; cmake --build . --config Release --target install
