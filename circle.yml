@@ -1,0 +1,11 @@
+machine:
+  services:
+    - docker
+dependencies:
+  override:
+    - docker info
+    - docker build -t caerusassociates/mitie .
+test:
+  post:
+    - docker run -d -p 5001:5001 caerusassociates/mitie; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:5001/
