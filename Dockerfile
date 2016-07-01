@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER Casey Hilland <chilland@caerusassociates.com>
+MAINTAINER Casey Hilland <casey.hilland@gmail.com>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -sc) main universe" >> /etc/apt/sources.list
 

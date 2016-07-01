@@ -2,3 +2,6 @@
 
 # mitie_compose
 MITIE as a service
+
+This software was developed at Caerus Associates and was donated to the Open
+Event Data Alliance.
